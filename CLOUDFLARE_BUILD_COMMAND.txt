@@ -1,0 +1,21 @@
+================================================
+CLOUDFLARE PAGES BUILD COMMAND
+================================================
+
+COPY THIS EXACT COMMAND INTO CLOUDFLARE:
+
+bash build-cloudflare.sh
+
+OR
+
+vite build --config vite.config.cloudflare.ts
+
+================================================
+
+DO NOT USE: npm run build
+DO NOT USE: npm run build
+DO NOT USE: npm run build
+
+ONLY USE ONE OF THE COMMANDS ABOVE!
+
+================================================

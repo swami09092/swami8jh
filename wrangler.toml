@@ -1,0 +1,21 @@
+name = "ping-monitor"
+main = "worker.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare Pages integration for serving the frontend
+pages_build_output_dir = "dist/public"
+
+# Cron Triggers - Check every minute if it's time to ping
+# The worker will internally randomize pings between 10-14 minutes
+[triggers]
+crons = ["*/1 * * * *"]
+
+# Environment variables (configure your target URL)
+[vars]
+TARGET_URL = "https://ipaddress-1-tucc.onrender.com"
+
+# Assets binding for serving static files
+[assets]
+directory = "dist/public"
+binding = "ASSETS"
